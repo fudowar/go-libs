@@ -11,7 +11,7 @@ func LoadYamlConfig(filePath string, obj interface{}) error {
 	if err != nil {
 		return err
 	}
-	if err := yaml.Unmarshal([]byte(file), &obj); err != nil {
+	if err := yaml.Unmarshal([]byte(file), obj); err != nil {
 		return err
 	}
 	return nil
